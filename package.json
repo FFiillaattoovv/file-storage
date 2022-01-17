@@ -1,0 +1,24 @@
+{
+  "name": "file-storage",
+  "version": "1.0.0",
+  "description": "Simple backend for file storage",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FFiillaattoovv/file-storage.git"
+  },
+  "keywords": [
+    "backend",
+    "file",
+    "storage"
+  ],
+  "author": "Maksim Filatov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FFiillaattoovv/file-storage/issues"
+  },
+  "homepage": "https://github.com/FFiillaattoovv/file-storage#readme"
+}
