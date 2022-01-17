@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/FFiillaattoovv/file-storage/issues"
   },
-  "homepage": "https://github.com/FFiillaattoovv/file-storage#readme"
+  "homepage": "https://github.com/FFiillaattoovv/file-storage#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
 }
