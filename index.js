@@ -1,6 +1,7 @@
 const express = require('express');
 const hbs = require("hbs");
 const multer = require('multer');
+const getFiles = require('./helpers/getFiles');
 
 const app = express();
 
@@ -10,22 +11,24 @@ app.set('view engine', 'hbs');
 hbs.registerPartials(__dirname + '/views/partials');
 
 const storageConfig = multer.diskStorage({
-    destination: (req, file, cb) =>{
+    destination: (req, file, cb) => {
         cb(null, "uploads");
     },
-    filename: (req, file, cb) =>{
+    filename: (req, file, cb) => {
         cb(null, file.originalname);
     }
 });
 
 app.use(express.static(__dirname));
 
-app.use(multer({storage:storageConfig}).single("fileData"));
+app.use(multer({ storage: storageConfig }).single("fileData"));
 
 app.get('/', (req, res) => {
+    const files = getFiles('./uploads');
     res.render('index', {
         title: 'Main page',
-        description: 'Output of stored files'
+        description: 'Output of stored files',
+        files: files
     });
 });
 

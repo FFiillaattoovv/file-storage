@@ -11,6 +11,11 @@
 {{> menu}}
 
 <h1>{{description}}</h1>
+<ul>
+    {{#each files}}
+        <li><a href="/uploads/{{this}}" download>{{this}}</a></li>
+    {{/each}}
+</ul>
 
 {{> footer}}
 </body>
