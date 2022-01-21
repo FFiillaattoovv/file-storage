@@ -1,19 +1,19 @@
 <!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{title}}</title>
-</head>
+
+{{> head}}
+
 <body>
+
 {{> menu}}
 
-<h1>{{description}}</h1>
+<h1 class="uk-heading-line"><span>{{description}}</span></h1>
 <ul>
     {{#each files}}
-        <li><a href="/uploads/{{this}}" download>{{this}}</a></li>
+        <li style="list-style-type: none">
+            <span uk-icon="download"></span>
+            <a href="/uploads/{{this}}" download>{{this}}</a>
+        </li>
     {{/each}}
 </ul>
 
